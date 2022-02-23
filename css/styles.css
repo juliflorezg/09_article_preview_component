@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #edf2f8;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 200px 248px 64px;
+  grid-template-rows: 200px 248px 64px;
+  max-width: 327px;
+}
+@media screen and (min-width: 768px) {
+  main {
+    -ms-grid-columns: 285px 445px;
+    grid-template-columns: 285px 445px;
+    -ms-grid-rows: 208px 72px;
+    grid-template-rows: 208px 72px;
+        grid-template-areas: "img content" "img footer";
+    max-width: 730px;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.card__picture {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.card__picture img {
+  max-width: 100%;
+  -o-object-position: 50% -20px;
+     object-position: 50% -20px;
+}
+@media screen and (min-width: 768px) {
+  .card__picture {
+    border-radius: 10px 0 0 10px;
+    grid-area: img;
+  }
+  .card__picture img {
+    -o-object-position: 5% 50%;
+       object-position: 5% 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    aspect-ratio: 1/1;
+  }
+}
+
+.card__content {
+  padding: 36px 29px 0 29px;
+  background-color: #fff;
+}
+.card__content .card__title {
+  font-weight: 700;
+  color: #465267;
+  font-size: 15px;
+  letter-spacing: 0.7px;
+  line-height: 1.5;
+  -webkit-margin-after: 15px;
+          margin-block-end: 15px;
+}
+.card__content .card__description {
+  color: #465267;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+}
+@media screen and (min-width: 768px) {
+  .card__content {
+    grid-area: content;
+    padding: 32px 40px 20px 40px;
+    border-radius: 0 10px 0 0;
+  }
+  .card__content .card__title {
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    line-height: 1.6;
+    -webkit-margin-after: 10px;
+            margin-block-end: 10px;
+  }
+  .card__content .card__description {
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    line-height: 1.6;
+  }
+}
+
+.card__footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 29px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+.card__footer .card__user-avatar {
+  max-width: 40px;
+  max-height: 40px;
+}
+.card__footer .card__user-avatar img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+.card__footer .card__metadata {
+  -webkit-margin-end: auto;
+          margin-inline-end: auto;
+}
+.card__footer .card__metadata .card__username {
+  display: block;
+  -webkit-margin-after: 2px;
+          margin-block-end: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #465267;
+}
+.card__footer .card__metadata .card__date {
+  font-size: 14px;
+  color: #6d7f97;
+}
+.card__footer .card__share-icon {
+  min-width: 32px;
+  min-height: 32px;
+  position: relative;
+  border: 1px solid #929eb5;
+  border-radius: 50%;
+  background-color: #edf2f8;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.card__footer .card__share-icon:hover {
+  transform: scale(1.2);
+  background-color: #929eb5;
+}
+.card__footer .card__share-icon:hover img {
+  filter: brightness(200%);
+}
+.card__footer .card__share-icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .card__footer {
+    grid-area: footer;
+    padding: 0 40px 32px 40px;
+    border-radius: 0 0 10px 0;
+    overflow: revert;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card__picture {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+  }
+  .card__content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .card__footer {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+}
+
+.card__share-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 29px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #465267;
+  border-radius: 0 0 9px 9px;
+  transform: translatex(0%);
+  transition: all 0.5s ease;
+}
+@media screen and (min-width: 768px) {
+  .card__share-container {
+    all: revert;
+    position: absolute;
+    top: -80px;
+    left: 265px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 15px 35px;
+    background-color: #465267;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+  }
+}
+.card__share-container .card__share-label span {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 5px;
+  color: #a8b3c2;
+}
+.card__share-container .card__socialmedia-icons {
+  -webkit-margin-end: auto;
+          margin-inline-end: auto;
+}
+.card__share-container .card__socialmedia-icons a {
+  -webkit-margin-end: 15px;
+          margin-inline-end: 15px;
+}
+.card__share-container .card__socialmedia-icons a:last-child {
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+}
+@media screen and (min-width: 768px) {
+  .card__share-container .card__socialmedia-icons {
+    display: flex;
+    position: relative;
+  }
+  .card__share-container .card__socialmedia-icons::after {
+    content: "";
+    position: absolute;
+    top: 38px;
+    left: -10px;
+    width: 25px;
+    height: 13px;
+    background-color: #465267;
+    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+            clip-path: polygon(0 0, 50% 100%, 100% 0);
+  }
+}
+.card__share-container .card__share-icon {
+  min-width: 32px;
+  min-height: 32px;
+  position: relative;
+  border: revert;
+  border-radius: 50%;
+  background-color: #6d7f97;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.card__share-container .card__share-icon:hover {
+  transform: scale(1.2);
+  background-color: #edeff3;
+}
+.card__share-container .card__share-icon:hover img {
+  filter: revert;
+}
+.card__share-container .card__share-icon img {
+  filter: brightness(200%);
+}
+@media screen and (min-width: 768px) {
+  .card__share-container .card__share-icon {
+    display: none;
+  }
+}
+
+.hidden {
+  transform: translatex(100%);
+  opacity: 0;
+}
+@media screen and (min-width: 768px) {
+  .hidden {
+    transform: revert;
+  }
+}
+/*# sourceMappingURL=../maps/styles.css.map */
