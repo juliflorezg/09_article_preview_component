@@ -1,0 +1,23 @@
+.card__picture {
+	width: 100%;
+	overflow: hidden;
+	border-radius: 10px 10px 0 0;
+	
+	img {
+		max-width: 100%;
+		object-position: 50% -20px;
+	}
+	
+	@media screen and (min-width: 768px) {
+		// all: revert;
+		border-radius: 10px 0 0 10px;
+		grid-area: img;
+		// overflow: revert;
+		
+		img {
+			object-position: 5% 50%;
+		object-fit: cover;
+		aspect-ratio: 1 / 1;
+	}
+	}
+}

@@ -1,0 +1,54 @@
+@use '../abstracts/abstracts' as abs;
+
+@mixin fontAlign($size, $spacing, $lineHeight) {
+	font-size: $size;
+	letter-spacing: $spacing;
+	line-height: $lineHeight;
+}
+
+.card__content {
+	padding: 36px 29px 0 29px;
+	background-color: #fff;
+
+	.card__title {
+		font-weight: 700;
+		color: abs.$veryDarkGrayishBlue;
+		@include fontAlign(15px, 0.7px, 1.5);
+		// font-size: 15px;
+		// letter-spacing: .7px;
+		// line-height:1.5;
+		margin-block-end: 15px;
+	}
+
+	.card__description {
+		color: abs.$veryDarkGrayishBlue;
+		@include fontAlign(13px, 0.3px, 1.5);
+		// font-size: 13px;
+		// letter-spacing: .3px;
+		// line-height: 1.5;
+	}
+
+	@media screen and (min-width: 768px) {
+		grid-area: content;
+		padding: 32px 40px 20px 40px;
+		border-radius: 0 10px 0 0;
+
+		.card__title {
+			// font-weight: 700;
+			// color: abs.$veryDarkGrayishBlue;
+			@include fontAlign(18px, 1.3px, 1.6);
+			// font-size: 15px;
+			// letter-spacing: .7px;
+			// line-height:1.5;
+			margin-block-end: 10px;
+		}
+
+		.card__description {
+			// color: abs.$veryDarkGrayishBlue;
+			@include fontAlign(12px, 0.6px, 1.6);
+			// font-size: 13px;
+			// letter-spacing: .3px;
+			// line-height: 1.5;
+		}
+	}
+}

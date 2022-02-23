@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Article preview component</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+			rel="stylesheet"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+	<body>
+		<main class="card">
+			<section class="card__picture">
+				<img src="./images/drawers.jpg" alt="drawers picture" />
+			</section>
+
+			<section class="card__content">
+				<p class="card__title">
+					Shift the overall look and feel by adding these wonderful touches to
+					furniture in your home
+				</p>
+				<p class="card__description">
+					Ever been in a room and felt like something was missing? Perhaps it
+					felt slightly bare and uninviting. I’ve got some simple tips to help
+					you make any room feel complete.
+				</p>
+			</section>
+
+			<footer class="card__footer">
+				<div class="card__user-avatar">
+					<img src="./images/avatar-michelle.jpg" alt="user avatar" />
+				</div>
+				<div class="card__metadata">
+					<span class="card__username">Michelle Appleton</span>
+					<span class="card__date">28 Jun 2020</span>
+				</div>
+				<div class="card__share-icon">
+					<img src="./images/icon-share.svg" alt="share icon" />
+				</div>
+
+				<div class="card__share-container hidden" id="share-container">
+					<div class="card__share-label">
+						<span>share</span>
+					</div>
+					<div class="card__socialmedia-icons">
+						<a href="#"><img src="./images/icon-facebook.svg" alt="facebook icon" /></a>
+						<a href="#"><img src="./images/icon-twitter.svg" alt="twitter icon" /></a>
+						<a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest icon" /></a>
+					</div>
+
+					<div class="card__share-icon">
+						<img src="./images/icon-share.svg" alt="share icon" />
+					</div>
+				</div>
+			</footer>
+		</main>
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+
+		<script src="./js/scripts-min.js"></script>
+	</body>
+</html>

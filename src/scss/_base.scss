@@ -1,0 +1,52 @@
+// styles for body, main container and attribution
+@use 'abstracts' as abs;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Manrope', sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: abs.$grayishBlue;
+	// background-color: darken(abs.$grayishBlue, 70%);
+	// padding: 80px 25px;
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+
+	@media screen and (min-width: 1050px) {
+		// display: revert;
+	}
+}
+
+main {
+	display: grid;
+	grid-template-rows: 200px 248px 64px;
+	max-width: 327px;
+	
+	@media screen and (min-width: 768px) {
+		grid-template-columns: 285px 445px;
+		grid-template-rows: 208px 72px;
+		grid-template-areas: 
+		'img content'
+		'img footer';
+		max-width: 730px;
+	}
+}
+
+.attribution {
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
