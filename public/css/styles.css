@@ -20,6 +20,8 @@ main {
   -ms-grid-rows: 200px 248px 64px;
   grid-template-rows: 200px 248px 64px;
   max-width: 327px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 40px 5px rgba(0, 0, 0, 0.17);
 }
 @media screen and (min-width: 768px) {
   main {
